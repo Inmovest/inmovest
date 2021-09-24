@@ -1,0 +1,38 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Verde 456",
+      "description": "Proyecto bonito",
+      "photoUrl":"https://definicion.de/wp-content/uploads/2009/08/edificio.jpg",
+      "developerId":  1,
+      "districtId": 1
+    },
+    {
+      "id": 2, "name": "Las Malvinas 666",
+      "description": "Zona renovada",
+      "photoUrl": "https://i.blogs.es/f0b8ef/01/1366_2000.jpg",
+      "developerId": 2,
+      "districtId": 1
+    },
+    {
+      "id": 3,
+      "name":  "Los Olivos 1212",
+      "description": "Reconstruccion de Edificion",
+      "photoUrl": "https://www.arkiplus.com/wp-content/uploads/2017/08/ciclo-vida-edificio.jpg",
+      "developerId": 3,
+      "districtId": 1
+    }
+  ],
+  "developers": [
+    { "id": 1, "name": "Jose Natividad"},
+    { "id": 2, "name": "Inmobiliara Pepito"},
+    { "id": 3, "name": "GBME"}
+  ],
+  "regions": [
+    { "id": 1, "name": "Lima Metropolitana"}
+  ],
+  "districts": [
+    { "id": 1, "name": "San Miguel", "regionId": 1}
+  ]
+}

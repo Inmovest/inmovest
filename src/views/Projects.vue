@@ -1,0 +1,44 @@
+<template>
+  <Layout>
+    <h1>Opportunities to invest</h1>
+    <div v-if="loading" class="loading">
+      Loading...
+    </div>
+    <div v-if="error" class="error">
+      {{error}}
+    </div>
+    <div v-if="projects" class="grid grid-cols-1 md:grid-cols-4 grid-rows-4 gap-4 xl:grid-cols-6 ">
+      <div v-for="project in projects" :key="project.id">
+        <Project :project="{...project}"/>
+      </div>
+    </div>
+  </Layout>
+</template>
+<script>
+import Layout from "@/components/Layout";
+import Project from "@/components/projects/Project";
+export default {
+  name: 'Home',
+  components: {
+    Project,
+    Layout
+  },
+  data () {
+    return {
+      loading: false,
+      projects: [],
+      error: null
+    }
+  },
+  beforeMount() {
+    this.fetchProjects()
+        .then(data => this.$data.projects = data)
+  },
+  methods: {
+    async fetchProjects () {
+      const response = await fetch(`${process.env.VUE_APP_API_URL}/projects?_expand=developer&_expand=district`)
+      return response.ok ? response.json() : response.error()
+    }
+  }
+}
+</script>
