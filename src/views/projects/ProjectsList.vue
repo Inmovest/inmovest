@@ -16,9 +16,9 @@
 </template>
 <script>
 import Layout from "@/components/Layout";
-import Project from "@/components/projects/Project";
+import Project from "@/components/Project";
 export default {
-  name: 'Home',
+  name: 'Projects',
   components: {
     Project,
     Layout

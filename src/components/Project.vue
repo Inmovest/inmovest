@@ -41,8 +41,22 @@
 import router from "@/router";
 
 export default {
-  name: 'Project',
-  props: ['project'],
+  props: {
+    project:{
+      id: Number,
+      name: String,
+      description: String,
+      photoUrl: String,
+      developer: {
+        id: Number,
+        name: String
+      },
+      district: {
+        id: Number,
+        name: String
+      }
+    }
+  },
   methods: {
     goToDetails () {
       router.push(`projects/${this.project.id}`)
