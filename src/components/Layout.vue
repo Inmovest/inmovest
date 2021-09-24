@@ -12,11 +12,22 @@
         v-model="drawer"
         absolute
         temporary
+        class="px-5"
     >
-      <v-list-item>
-        Home
-      </v-list-item>
-      <v-divider></v-divider>
+      <v-list-item-content>
+        <v-list-item-title class="text-h6">
+          Inmovest
+        </v-list-item-title>
+        <v-divider></v-divider>
+        <div v-for="item in items" :key="item.title">
+          <router-link :to="item.route">
+            <v-list-item link>
+              <v-list-item-icon> <v-icon>{{item.icon}}</v-icon> </v-list-item-icon>
+              <v-list-item-title> {{item.title}} </v-list-item-title>
+            </v-list-item>
+          </router-link>
+        </div>
+      </v-list-item-content>
     </v-navigation-drawer>
     <slot></slot>
   </section>
@@ -28,7 +39,9 @@ export default {
     return {
       drawer: false,
       items: [
-        { title: 'Home', icon: 'mdi-view-dashboard'}
+        { title: 'Home', icon: 'mdi-home', route: '/'},
+        { title: 'Projects', icon: 'mdi-chart-line-variant', route: '/projects'},
+        { title: 'Statistics', icon: 'mdi-chart-line', route: '/statistics'}
       ]
     }
   },
