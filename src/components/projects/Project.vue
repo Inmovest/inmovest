@@ -15,6 +15,7 @@
 
       <div class="flex w-full p-5">
         <v-btn
+            @click="goToDetails"
             class="w-1/2"
             small
             outlined
@@ -22,6 +23,7 @@
           <span class="text-xs">More Information</span>
         </v-btn>
         <v-btn
+            @click="goToInvest"
             class="w-1/2"
             small
             outlined
@@ -36,8 +38,18 @@
 </template>
 
 <script>
+import router from "@/router";
+
 export default {
   name: 'Project',
-  props: ['project']
+  props: ['project'],
+  methods: {
+    goToDetails () {
+      router.push(`projects/${this.project.id}`)
+    },
+    goToInvest () {
+      router.push(`projects/${this.project.id}/invest`)
+    }
+  }
 }
 </script>

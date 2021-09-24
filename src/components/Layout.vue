@@ -2,7 +2,8 @@
   <section class="w-full h-full">
     <nav>
       <v-app-bar
-          color="green"
+          color="primary"
+          dark
       >
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         <v-toolbar-title>Inmovest</v-toolbar-title>
