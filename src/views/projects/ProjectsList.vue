@@ -1,15 +1,17 @@
 <template>
   <Layout>
-    <h1>Opportunities to invest</h1>
-    <div v-if="loading" class="loading">
-      Loading...
-    </div>
-    <div v-if="error" class="error">
-      {{error}}
-    </div>
-    <div v-if="projects" class="grid grid-cols-1 md:grid-cols-4 grid-rows-4 gap-4 xl:grid-cols-6 ">
-      <div v-for="project in projects" :key="project.id">
-        <Project :project="{...project}"/>
+    <div class="w-full h-full bg-green-50">
+      <h1 class="text-2xl lg:text-5xl p-5">Opportunities to invest</h1>
+      <div v-if="loading" class="loading">
+        Loading...
+      </div>
+      <div v-if="error" class="error">
+        {{error}}
+      </div>
+      <div v-if="projects" class="px-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 grid-rows-auto gap-4">
+        <div v-for="project in projects" :key="project.id">
+          <Project :project="{...project}"/>
+        </div>
       </div>
     </div>
   </Layout>

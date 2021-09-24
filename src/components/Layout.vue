@@ -1,12 +1,20 @@
 <template>
   <section class="w-full h-full">
-    <nav>
+    <nav class="h-nav-ns">
       <v-app-bar
-          color="primary"
-          dark
+          color="teal lighten-3"
       >
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-        <v-toolbar-title>Inmovest</v-toolbar-title>
+        <router-link to="/">
+          <div class="flex items-center text-black hover:text-green-800 ">
+            <v-img
+                src="@/assets/logo.svg"
+                width="20"
+                class="mr-1 bg-black hover:bg-green-800 transition"
+            />
+            <v-app-bar-title>nmovest</v-app-bar-title>
+          </div>
+        </router-link>
       </v-app-bar>
     </nav>
     <v-navigation-drawer
@@ -30,7 +38,9 @@
         </div>
       </v-list-item-content>
     </v-navigation-drawer>
-    <slot></slot>
+    <section id="content">
+      <slot></slot>
+    </section>
   </section>
 </template>
 
@@ -49,3 +59,16 @@ export default {
   name: 'Layout'
 }
 </script>
+
+<style>
+#content {
+  /* Firefox */
+  height: -moz-calc(100% - 64px);
+  /* WebKit */
+  height: -webkit-calc(100% - 64px);
+  /* Opera */
+  height: -o-calc(100% - 64px);
+  /* Standard */
+  height: calc(100% - 64px);
+}
+</style>

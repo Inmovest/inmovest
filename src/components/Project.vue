@@ -10,25 +10,36 @@
         <v-img
             :src="this.project.photoUrl"
             class="object-cover h-full"
-        ></v-img>
+        >
+          <template v-slot:placeholder>
+            <v-row
+                class="h-full m-0"
+                align="center"
+                justify="center"
+            >
+              <v-progress-circular
+                  indeterminate
+                  color="green"
+              ></v-progress-circular>
+            </v-row>
+          </template>
+        </v-img>
       </div>
 
-      <div class="flex w-full p-5">
+      <div class="flex w-full p-5 justify-center items-center">
         <v-btn
             @click="goToDetails"
-            class="w-1/2"
-            small
+            class="w-2/5 mr-5"
+            color="teal"
             outlined
         >
-          <span class="text-xs">More Information</span>
+          <span class="text-xs">Information</span>
         </v-btn>
         <v-btn
             @click="goToInvest"
-            class="w-1/2"
-            small
-            outlined
-            color="primary"
-        > I want to invest!
+            class="w-2/5"
+            color="teal"
+        > <span class="text-white">Invest</span>
         </v-btn>
       </div>
     </div>

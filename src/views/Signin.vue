@@ -1,6 +1,6 @@
 <template>
-  <section class="w-full h-full flex justify-center items-center bg-gradient-to-b from-gray-100 to-gray-300">
-    <v-card class="w-4/5 h-4/5 lg:w-2/4 lg:h-3/5 xl:w-2/6 xl:h-3/5 2xl:w-1/6 2xl:h-2/5">
+  <section class="w-full h-full flex justify-center items-center bg-gradient-to-b from-green-50 to-green-200">
+    <v-card class="w-4/5 h-4/5 lg:w-2/4 lg:h-3/5 xl:w-2/6 xl:h-3/5 2xl:w-1/6 2xl:h-1/2">
       <div class="h-full flex flex-col justify-between p-5">
         <h1 class="font-bold text-4xl text-center my-5">
           Login to Inmovest!
@@ -32,7 +32,7 @@
         <div class="w-full flex justify-center">
           <v-btn
               :disabled="!valid"
-              color="primary"
+              color="teal darken-3"
               @click="submit"
               outlined
           > Log in </v-btn>
