@@ -6,7 +6,7 @@
         Loading...
       </div>
       <div v-if="error" class="error">
-        {{error}}
+        <ServerError/>
       </div>
       <div v-if="projects" class="px-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 grid-rows-auto gap-4">
         <div v-for="project in projects" :key="project.id">
@@ -17,30 +17,29 @@
   </Layout>
 </template>
 <script>
-import Layout from "@/components/Layout";
+import Layout from "@/components/common/Layout";
 import Project from "@/components/Project";
+import ServerError from "@/views/common/ServerError";
+import { getProjects } from "@/services/projectsService";
+
 export default {
   name: 'Projects',
   components: {
+    ServerError,
     Project,
     Layout
   },
   data () {
     return {
-      loading: false,
       projects: [],
+      loading: false,
       error: null
     }
   },
   beforeMount() {
-    this.fetchProjects()
+    getProjects()
         .then(data => this.$data.projects = data)
-  },
-  methods: {
-    async fetchProjects () {
-      const response = await fetch(`${process.env.VUE_APP_API_URL}/projects?_expand=developer&_expand=district`)
-      return response.ok ? response.json() : response.error()
-    }
+        .catch(e => this.$data.error = e)
   }
 }
 </script>

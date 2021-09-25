@@ -29,14 +29,13 @@
               @click:append="show = !show"
           ></v-text-field>
         </v-form>
-        <div class="w-full flex justify-center">
-          <v-btn
-              :disabled="!valid"
-              color="teal darken-3"
-              @click="submit"
-              outlined
-          > Log in </v-btn>
-        </div>
+        <v-btn
+            :disabled="!valid"
+            color="teal darken-3"
+            class="w-1/12 self-center"
+            @click="submit"
+            outlined
+        > Log in </v-btn>
         <router-link to="/register" class="text-sm text-blue-500 text-center hover:underline">
           Don't have an account? Sign Up
         </router-link>
