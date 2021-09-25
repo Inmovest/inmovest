@@ -12,7 +12,9 @@
 </template>
 
 <script>
-import Layout from "@/components/Layout";
+import Layout from "@/components/common/Layout";
+import { getProjectById } from "@/services/projectsService";
+
 export default {
   name: 'ProjectDetails',
   components: {
@@ -20,18 +22,18 @@ export default {
   },
   data (){
     return {
-      project: null
+      loading: true,
+      project: null,
+      error: null
     }
   },
   beforeMount() {
-    this.fetchProject()
-        .then(data => this.$data.project = data)
-  },
-  methods: {
-    async fetchProject() {
-      const response = await fetch(`${process.env.VUE_APP_API_URL}/projects/${this.$route.params.id}?_expand=developer&_expand=district`)
-      return response.ok ? response.json() : response.error()
-    }
+    getProjectById(this.$route.params.id)
+        .then(data => {
+          this.$data.project = data;
+          this.$data.loading = false;
+        })
+        .catch(e => this.$data.error = e)
   }
 }
 </script>

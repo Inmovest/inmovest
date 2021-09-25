@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <main id="app" class="w-screen h-screen">
+    <main class="w-screen h-screen">
       <router-view/>
     </main>
   </v-app>

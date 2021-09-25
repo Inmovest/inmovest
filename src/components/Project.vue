@@ -1,10 +1,14 @@
 <template>
-  <v-card>
-    <div class="flex flex-col justify-between items-center h-96">
-      <div>
+  <v-hover>
+    <v-card class="flex flex-col justify-between items-center h-96 cursor-pointer">
+      <div class="w-full">
         <v-card-title> {{this.project.name}} </v-card-title>
-        <v-card-text>{{this.project.developer.name}}</v-card-text>
-        <v-card-text>{{this.project.district.name}}</v-card-text>
+        <v-card-subtitle class="pl-4 p-0 text-gray-400">Campaign 1 - By {{this.project.developer.name}}</v-card-subtitle>
+        <v-card-subtitle class="py-0">
+          <v-list-item-icon><v-icon>mdi-map-marker</v-icon>
+            {{this.project.district.name}}
+          </v-list-item-icon>
+        </v-card-subtitle>
       </div>
       <div class="w-full h-40">
         <v-img
@@ -42,14 +46,12 @@
         > <span class="text-white">Invest</span>
         </v-btn>
       </div>
-    </div>
-
-
-  </v-card>
+    </v-card>
+  </v-hover>
 </template>
 
 <script>
-import router from "@/router";
+import router from "@/routes";
 
 export default {
   props: {
