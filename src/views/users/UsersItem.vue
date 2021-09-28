@@ -1,34 +1,46 @@
 <template>
   <Layout>
-    <div v-if="user">
-      <div>
-        <h2>Names</h2>
-        <p>{{ user.name }}</p>
-        <p>{{ user.secondName }}</p>
-        <h2>LastNames</h2>
-        <p>{{ user.lastname }}</p>
-        <p>{{ user.secondLastname }}</p>
-        <h2>RUC</h2>
-        <p>{{ user.ruc }}</p>
-        <h2>Email</h2>
-        <p>{{ user.email }}</p>
-        <h2>Password</h2>
-        <p>{{ user.password }}</p>
+    <v-card class="flex flex-col justify-between items-center h-96 cursor-pointer">
+      <div class="w-full" v-if="user">
+        <div>
+          <v-card-title> Names </v-card-title>
+          <v-avatar>
+            <v-img
+                :src="this.user.avatar"
+                class="object-cover h-full"
+            ></v-img>
+          </v-avatar>
+          <v-card-subtitle class="pl-4 p-0 text-gray-400">{{this.user.name}} {{this.user.secondName}}</v-card-subtitle>
+        </div>
+        <div>
+          <v-card-title> Lastnames </v-card-title>
+          <v-card-subtitle class="pl-4 p-0 text-gray-400">{{this.user.lastname}} {{this.user.secondLastname}}</v-card-subtitle>
+        </div>
+        <div>
+          <v-card-title> RUC </v-card-title>
+          <v-card-subtitle class="pl-4 p-0 text-gray-400">{{this.user.ruc}}</v-card-subtitle>
+        </div>
+        <div>
+          <v-card-title> Email </v-card-title>
+          <v-card-subtitle class="pl-4 p-0 text-gray-400">{{this.user.email}}</v-card-subtitle>
+        </div>
+        <div>
+          <v-card-title> Password </v-card-title>
+          <v-card-subtitle class="pl-4 p-0 text-gray-400">{{this.user.password}}</v-card-subtitle>
+        </div>
       </div>
-    </div>
+    </v-card>
   </Layout>
 </template>
 
 <script>
 import Layout from "@/components/common/Layout";
 import {getUserById} from "@/services/profilesService";
-import Profile from "@/components/Profile";
 
 export default {
   name: "UserDetails",
   components: {
     Layout,
-    Profile
   },
   data() {
     return {
