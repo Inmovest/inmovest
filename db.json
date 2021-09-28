@@ -4,12 +4,13 @@
       "id": 1,
       "name": "Verde 456",
       "description": "Proyecto bonito",
-      "photoUrl":"https://definicion.de/wp-content/uploads/2009/08/edificio.jpg",
-      "developerId":  1,
+      "photoUrl": "https://definicion.de/wp-content/uploads/2009/08/edificio.jpg",
+      "developerId": 1,
       "districtId": 1
     },
     {
-      "id": 2, "name": "Las Malvinas 666",
+      "id": 2,
+      "name": "Las Malvinas 666",
       "description": "Zona renovada",
       "photoUrl": "https://i.blogs.es/f0b8ef/01/1366_2000.jpg",
       "developerId": 2,
@@ -17,7 +18,7 @@
     },
     {
       "id": 3,
-      "name":  "Los Olivos 1212",
+      "name": "Los Olivos 1212",
       "description": "Reconstruccion de Edificion",
       "photoUrl": "https://www.arkiplus.com/wp-content/uploads/2017/08/ciclo-vida-edificio.jpg",
       "developerId": 3,
@@ -25,7 +26,7 @@
     },
     {
       "id": 4,
-      "name":  "Los Manzanos 788",
+      "name": "Los Manzanos 788",
       "description": "Reconstruccion de Edificion",
       "photoUrl": "https://static2.abc.es/media/summum/2020/12/09/lakhta-center-1-klpH--620x349@abc.jpg",
       "developerId": 3,
@@ -33,7 +34,7 @@
     },
     {
       "id": 5,
-      "name":  "Los Tulipanes 45787",
+      "name": "Los Tulipanes 45787",
       "description": "Reconstruccion de Edificion",
       "photoUrl": "https://gestion.pe/resizer/dHos3lb2QHQfZVWchh5j-7WL9FU=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/AQZTYEXQ6FGLDEGOSHFU5D3WJ4.jpg",
       "developerId": 3,
@@ -41,15 +42,49 @@
     }
   ],
   "developers": [
-    { "id": 1, "name": "Jose Natividad"},
-    { "id": 2, "name": "Inmobiliara Pepito"},
-    { "id": 3, "name": "GBME"}
+    {
+      "id": 1,
+      "name": "Jose Natividad"
+    },
+    {
+      "id": 2,
+      "name": "Inmobiliara Pepito"
+    },
+    {
+      "id": 3,
+      "name": "GBME"
+    }
   ],
   "regions": [
-    { "id": 1, "name": "Lima Metropolitana"}
+    {
+      "id": 1,
+      "name": "Lima Metropolitana"
+    }
   ],
   "districts": [
-    { "id": 1, "name": "San Miguel", "regionId": 1},
-    { "id": 2, "name": "Lince", "regionId":  2}
+    {
+      "id": 1,
+      "name": "San Miguel",
+      "regionId": 1
+    },
+    {
+      "id": 2,
+      "name": "Lince",
+      "regionId": 2
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "José",
+      "avatar": "https://concepto.de/wp-content/uploads/2018/08/persona-e1533759204552.jpg",
+      "secondName": "",
+      "lastname": "Vivaldi",
+      "secondLastname": "Rodriguez",
+      "ruc": "123435671891",
+      "email": "jvrodriguez@gmail.com",
+      "password": "****",
+      "confirmPassword": "****"
+    }
   ]
 }

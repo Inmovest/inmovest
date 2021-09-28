@@ -12,7 +12,7 @@
                 width="20"
                 class="mr-1 bg-black hover:bg-green-800 transition"
             />
-            <v-app-bar-title>nmovest</v-app-bar-title>
+            <v-app-bar-title>Inmovest</v-app-bar-title>
           </div>
         </router-link>
       </v-app-bar>
@@ -52,7 +52,8 @@ export default {
       items: [
         { title: 'Home', icon: 'mdi-home', route: '/'},
         { title: 'Projects', icon: 'mdi-chart-line-variant', route: '/projects'},
-        { title: 'Statistics', icon: 'mdi-chart-line', route: '/statistics'}
+        { title: 'Statistics', icon: 'mdi-chart-line', route: '/statistics'},
+        { title: 'Profile', icon: 'mdi-account', route: '/users/1'}, //hardcode user/id
       ]
     }
   },
