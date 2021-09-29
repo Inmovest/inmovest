@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <div>
     <v-card class="flex flex-col justify-between items-center h-96 cursor-pointer">
       <div class="w-full" v-if="user">
         <div>
@@ -30,7 +30,63 @@
         </div>
       </div>
     </v-card>
-  </Layout>
+    <v-card>
+  <table>
+    <tr>
+      <td>
+        <h3>Name</h3>
+      </td>
+      <td>
+        <input type="text" id="iName" name="iName" :value=this.user.name>
+      </td>
+      <td>
+        <h3>Lastname</h3>
+      </td>
+      <td>
+        <input type="text" id="iLastname" name="iLastname" :value=this.user.lastname>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3>RUC</h3>
+      </td>
+      <td>
+        <input type="text" id="iRuc" name="iRuc" :value="this.user.ruc">
+      </td>
+      <td>
+        <h3>Email</h3>
+      </td>
+      <td>
+        <input type="text" id="iEmail" name="iEmail" :value="this.user.email">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3>Password</h3>
+      </td>
+      <td>
+        <input type="password" id="iPassword" name="iPassword" :value="this.user.password">
+      </td>
+      <td>
+        <h3>Confirm Password</h3>
+      </td>
+      <td>
+        <input type="password" id="iCP" name="iCP">
+      </td>
+    </tr>
+    <tr class="center">
+      <td colspan="4" class="center">
+      <v-btn
+          elevation="3"
+          color = "warning"
+      >
+        Update Information
+      </v-btn>
+      </td>
+    </tr>
+  </table>
+    </v-card>
+  </div>
 </template>
 
 <script>
@@ -39,9 +95,7 @@ import {getUserById} from "@/services/profilesService";
 
 export default {
   name: "UserDetails",
-  components: {
-    Layout,
-  },
+  components: {},
   data() {
     return {
       loading: true,
@@ -61,5 +115,10 @@ export default {
 </script>
 
 <style scoped>
-
+th, td {
+  padding: 20px;
+}
+.center {
+  text-align: center;
+}
 </style>
