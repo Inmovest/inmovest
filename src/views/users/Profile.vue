@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <Layout>
     <v-card class="flex flex-col justify-between items-center h-96 cursor-pointer">
       <div class="w-full" v-if="user">
         <div>
@@ -86,7 +86,7 @@
     </tr>
   </table>
     </v-card>
-  </div>
+  </Layout>
 </template>
 
 <script>
@@ -95,7 +95,9 @@ import {getUserById} from "@/services/profilesService";
 
 export default {
   name: "UserDetails",
-  components: {},
+  components: {
+    Layout
+  },
   data() {
     return {
       loading: true,
