@@ -1,5 +1,6 @@
 import fetchAPI from "@/services/common";
 
+//methods
 const getProjects = async () => fetchAPI('/projects?_expand=developer&_expand=district')
 const getProjectById = async (id) => fetchAPI(`/projects/${id}?_expand=developer&_expand=district`)
 /*
