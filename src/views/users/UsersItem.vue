@@ -1,101 +1,83 @@
 <template>
-  <div>
-    <v-card class="flex flex-col justify-between items-center h-96 cursor-pointer">
-      <div class="w-full" v-if="user">
-        <div>
-          <v-card-title> Names </v-card-title>
-          <v-avatar>
-            <v-img
-                :src="this.user.avatar"
-                class="object-cover h-full"
-            ></v-img>
-          </v-avatar>
-          <v-card-subtitle class="pl-4 p-0 text-gray-400">{{this.user.name}} {{this.user.secondName}}</v-card-subtitle>
-        </div>
-        <div>
-          <v-card-title> Lastnames </v-card-title>
-          <v-card-subtitle class="pl-4 p-0 text-gray-400">{{this.user.lastname}} {{this.user.secondLastname}}</v-card-subtitle>
-        </div>
-        <div>
-          <v-card-title> RUC </v-card-title>
-          <v-card-subtitle class="pl-4 p-0 text-gray-400">{{this.user.ruc}}</v-card-subtitle>
-        </div>
-        <div>
-          <v-card-title> Email </v-card-title>
-          <v-card-subtitle class="pl-4 p-0 text-gray-400">{{this.user.email}}</v-card-subtitle>
-        </div>
-        <div>
-          <v-card-title> Password </v-card-title>
-          <v-card-subtitle class="pl-4 p-0 text-gray-400">{{this.user.password}}</v-card-subtitle>
-        </div>
-      </div>
-    </v-card>
-    <v-card>
-  <table>
-    <tr>
-      <td>
-        <h3>Name</h3>
-      </td>
-      <td>
-        <input type="text" id="iName" name="iName" :value=this.user.name>
-      </td>
-      <td>
-        <h3>Lastname</h3>
-      </td>
-      <td>
-        <input type="text" id="iLastname" name="iLastname" :value=this.user.lastname>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3>RUC</h3>
-      </td>
-      <td>
-        <input type="text" id="iRuc" name="iRuc" :value="this.user.ruc">
-      </td>
-      <td>
-        <h3>Email</h3>
-      </td>
-      <td>
-        <input type="text" id="iEmail" name="iEmail" :value="this.user.email">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3>Password</h3>
-      </td>
-      <td>
-        <input type="password" id="iPassword" name="iPassword" :value="this.user.password">
-      </td>
-      <td>
-        <h3>Confirm Password</h3>
-      </td>
-      <td>
-        <input type="password" id="iCP" name="iCP">
-      </td>
-    </tr>
-    <tr class="center">
-      <td colspan="4" class="center">
-      <v-btn
-          elevation="3"
-          color = "warning"
-      >
-        Update Information
-      </v-btn>
-      </td>
-    </tr>
-  </table>
-    </v-card>
-  </div>
+  <Layout>
+    <div class="marginated">
+      <v-card class = "semi center">
+        <v-row dense>
+          <v-col>
+            <v-avatar
+                class="ma-3"
+                size="125"
+                tile
+            >
+              <v-img :src=this.user.avatar></v-img>
+            </v-avatar>
+          </v-col>
+        </v-row>
+        <v-row dense>
+          <v-col>
+            <h3>Name</h3>
+          </v-col>
+          <v-col>
+            <input type="text" id="iName" name="iName" :value=this.user.name>
+          </v-col>
+          <v-col>
+            <h3>Lastname</h3>
+          </v-col>
+          <v-col>
+            <input type="text" id="iLastname" name="iLastname" :value=this.user.lastname>
+          </v-col>
+        </v-row>
+        <v-row dense>
+          <v-col>
+            <h3>RUC</h3>
+          </v-col>
+          <v-col>
+            <input type="text" id="iRuc" name="iRuc" :value="this.user.ruc">
+          </v-col>
+          <v-col>
+            <h3>Email</h3>
+          </v-col>
+          <v-col>
+            <input type="text" id="iEmail" name="iEmail" :value="this.user.email">
+          </v-col>
+        </v-row>
+        <v-row dense>
+          <v-col>
+            <h3>Password</h3>
+          </v-col>
+          <v-col>
+            <input type="password" id="iPassword" name="iPassword" :value="this.user.password">
+          </v-col>
+          <v-col>
+            <h3>Confirm Password</h3>
+          </v-col>
+          <v-col>
+            <input type="password" id="iCP" name="iCP">
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-btn
+                elevation="3"
+                color = "warning"
+                v-on:click="updateInformation"
+            >
+              Update Information
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-card>
+    </div>
+  </Layout>
 </template>
 
 <script>
-import Layout from "@/components/common/Layout";
-import {getUserById} from "@/services/profilesService";
+import {getUserById, updateUserInfo} from "@/services/profilesService";
+import Layout from "../../components/common/Layout";
 
 export default {
   name: "UserDetails",
-  components: {},
+  components: {Layout},
   data() {
     return {
       loading: true,
@@ -110,6 +92,18 @@ export default {
           this.$data.loading = false;
         })
         .catch(e => this.$data.error = e)
+  },
+  methods: {
+    updateInformation() {
+      this.user.name = document.getElementById("iName").innerText;
+      this.user.lastname = document.getElementById("iLastname").innerText;
+      this.user.ruc = document.getElementById("iRuc").innerText;
+      this.user.email = document.getElementById("iEmail").innerText;
+      if(document.getElementById("iPassword") == document.getElementById("ICP")) {
+        this.user.password = document.getElementById("iPassword").innerText;
+      }
+      updateUserInfo(1, {name:"ronaldiño"});
+    }
   }
 }
 </script>
@@ -120,5 +114,12 @@ th, td {
 }
 .center {
   text-align: center;
+  margin: auto;
+}
+.semi {
+  width: calc(50%);
+}
+.marginated {
+  margin-top: 2rem;
 }
 </style>
