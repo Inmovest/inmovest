@@ -83,6 +83,40 @@
       "ruc": "123435671891",
       "email": "jvrodriguez@gmail.com",
       "password": "password"
+    },
+    {
+      "id": 2,
+      "name": "José",
+      "avatar": "https://concepto.de/wp-content/uploads/2018/08/persona-e1533759204552.jpg",
+      "lastname": "Vivaldi",
+      "secondLastname": "Rodriguez",
+      "ruc": "12343567189",
+      "email": "jvrodriguez@gmail.com",
+      "password": "password"
+    },
+    {
+      "id": 3,
+      "name": "Ricardo",
+      "avatar": "https://c1.thejournal.ie/media/2019/06/graham-27-752x501.png",
+      "lastname": "Akono",
+      "secondLastname": "Rojas",
+      "ruc": "87234876262",
+      "email": "rasdiuako@gmail.com",
+      "password": "password"
+    }
+  ],
+  "investments": [
+    {
+      "id": 1,
+      "value": 1000,
+      "userId": 1,
+      "projectId": 1
+    },
+    {
+      "id": 2,
+      "value": 2200,
+      "userId": 3,
+      "projectId": 1
     }
   ]
 }
