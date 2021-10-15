@@ -1,6 +1,8 @@
 <template>
   <Layout>
-    <h1>test</h1>
+    <div class="center-big">
+      <h1>Welcome</h1>
+    </div>
   </Layout>
 </template>
 
@@ -23,3 +25,10 @@ export default {
   }
 }
 </script>
+
+<style>
+ .center-big{
+   text-align: center;
+   font-size: 8rem;
+ }
+</style>

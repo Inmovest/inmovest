@@ -68,6 +68,23 @@
         </v-row>
       </v-card>
     </div>
+    <div class="center">
+      <br>
+      <h2>Got a Problem?</h2>
+      <p>We are here for you</p>
+      <br>
+      <h3><strong>Contact information</strong></h3>
+      <table class="center">
+        <tr>
+          <td>Support Team Email</td>
+          <td>inmovest.support@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Support Team Number</td>
+          <td>+51 933 933 933</td>
+        </tr>
+      </table>
+    </div>
   </Layout>
 </template>
 
@@ -109,6 +126,9 @@ export default {
 </script>
 
 <style scoped>
+h2{
+  font-size:2rem;
+}
 th, td {
   padding: 20px;
 }
