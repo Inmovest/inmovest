@@ -94,7 +94,9 @@ import Layout from "../../components/common/Layout";
 
 export default {
   name: "UserDetails",
-  components: {Layout},
+  components: {
+    Layout
+  },
   data() {
     return {
       loading: true,
