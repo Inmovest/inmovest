@@ -84,7 +84,38 @@
       "ruc": "123435671891",
       "email": "jvrodriguez@gmail.com",
       "password": "****",
-      "confirmPassword": "****"
+      "confirmPassword": "****",
+      "collectionData": [
+        ["Month", "Verde 456", "Las Malvinas 666", "Los Olivos 1212"],
+        ["2015", 8600, 11200, 19600],
+        ["2016", 7800, 14500, 6700],
+        ["2017", 10900, 44500, 10300],
+        ["2018", 12700, 23800, 14500],
+        ["2019", 36500, 4700, 55500],
+        ["2020", 22500, 68400, 33400],
+        ["2021", 40450, 90500, 42800]
+
+      ]
+    }
+  ],
+  "projectToInvest" : [
+    {
+      "investorId": 1,
+      "projectId": 1,
+      "amount": 500,
+      "investmentAt": "01/08/2021"
+    },
+    {
+      "investorId": 1,
+      "projectId": 2,
+      "amount": 600,
+      "investmentAt": "21/08/2021"
+    },
+    {
+      "investorId": 1,
+      "projectId": 3,
+      "amount": 1500,
+      "investmentAt": "30/09/2021"
     }
   ]
 }

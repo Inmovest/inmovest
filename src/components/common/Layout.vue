@@ -52,7 +52,7 @@ export default {
       items: [
         { title: 'Home', icon: 'mdi-home', route: '/'},
         { title: 'Projects', icon: 'mdi-chart-line-variant', route: '/projects'},
-        { title: 'Statistics', icon: 'mdi-chart-line', route: '/statistics'},
+        { title: 'Statistics', icon: 'mdi-chart-line', route: '/users/1/investment'},
         { title: 'Profile', icon: 'mdi-account', route: '/users/1'}, //hardcode user/id
       ]
     }
