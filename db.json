@@ -41,6 +41,18 @@
       "districtId": 1
     }
   ],
+  "investments": [
+    { "id": 1, "amount": 500.52, "projectId": 1, "userId": 1 },
+    { "id": 2, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 3, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 4, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 5, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 6, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 7, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 8, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 9, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 10, "amount": 800.64, "projectId": 1, "userId": 1 }
+  ],
   "developers": [
     {
       "id": 1,
@@ -78,13 +90,11 @@
       "id": 1,
       "name": "José",
       "avatar": "https://concepto.de/wp-content/uploads/2018/08/persona-e1533759204552.jpg",
-      "secondName": "",
       "lastname": "Vivaldi",
       "secondLastname": "Rodriguez",
       "ruc": "123435671891",
       "email": "jvrodriguez@gmail.com",
-      "password": "****",
-      "confirmPassword": "****"
+      "password": "password"
     }
   ]
 }
