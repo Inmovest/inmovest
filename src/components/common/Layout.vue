@@ -15,6 +15,13 @@
             <v-app-bar-title>Inmovest</v-app-bar-title>
           </div>
         </router-link>
+        <v-spacer></v-spacer>
+
+        <router-link to="/user/1/messages">
+          <v-btn icon class= "ml-1 p-5">
+            <v-icon>mdi-message</v-icon>
+          </v-btn>
+        </router-link>
       </v-app-bar>
     </nav>
     <v-navigation-drawer

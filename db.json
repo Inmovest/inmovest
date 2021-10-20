@@ -86,5 +86,28 @@
       "password": "****",
       "confirmPassword": "****"
     }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Investment Status",
+      "content": "The property you have invested in has increased in value by 5% ",
+      "sentAt": "2021-09-11 09:53:05"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "Update Profile Information",
+      "content": "Please update your profile information",
+      "sentAt": "2021-20-11 10:53:05"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "Investment Status",
+      "content": "La propiedad en la usted a invertido ha incrementado su valor un 5%",
+      "sentAt": "2021-09-11 09:53:05"
+    }
   ]
 }
