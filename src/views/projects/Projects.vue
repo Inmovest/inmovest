@@ -18,7 +18,7 @@
 </template>
 <script>
 import Layout from "@/components/common/Layout";
-import Project from "@/components/Project";
+import Project from "@/components/ProjectCard";
 import ServerError from "@/views/common/ServerError";
 import { getProjects } from "@/services/projectsService";
 

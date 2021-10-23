@@ -1,6 +1,17 @@
 <template>
   <Layout>
-    <h1>test</h1>
+    <section class="h-full">
+      <h1 class="text-6xl p-5">Invest on Real State!</h1>
+      <div class="w-full flex justify-start items-center">
+        <img src="@/assets/images/home.jpg" alt="home" class="mr-5 rounded-lg opacity-70">
+        <router-link to="/projects">
+          <v-btn color="secondary">
+            Start investing!
+          </v-btn>
+        </router-link>
+      </div>
+
+    </section>
   </Layout>
 </template>
 
