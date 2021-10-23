@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="w-full h-full bg-green-50">
-      <h1 class="text-2xl lg:text-5xl p-5">Projects in which you have invested</h1>
+      <h1 class="text-2xl lg:text-5xl p-5">Your Investments</h1>
       <div v-if="loading" class="loading">
         Loading...
       </div>
