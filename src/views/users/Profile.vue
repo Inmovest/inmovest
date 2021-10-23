@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import {getUserById, updateUserInfo} from "@/services/profileService";
+import {getUserById, updateUserInfo} from "@/services/profilesService";
 import Layout from "../../components/common/Layout";
 
 export default {
@@ -88,7 +88,7 @@ export default {
     }
   },
   beforeMount() {
-    getUserById(this.$route.params.id)
+    getUserById(1)
         .then(data => {
           this.$data.user = data;
           this.$data.loading = false;

@@ -27,7 +27,7 @@ export default {
     Layout
   },
   beforeMount() {
-    getMessageById(this.$route.params.id)
+    getMessageById(1)
         .then(data => {
           this.$data.messages = data;
           this.$data.loading = false;

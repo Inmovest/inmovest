@@ -36,7 +36,7 @@ export default {
     Layout,
   },
   beforeMount() {
-    getInvestmentsById(this.$route.params.id)
+    getInvestmentsById(1)
         .then(data => {
           this.$data.investments = data;
           console.log("data", this.$data.investments);

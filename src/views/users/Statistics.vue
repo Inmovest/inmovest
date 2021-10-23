@@ -36,7 +36,7 @@ export default {
     };
   },
   beforeMount() {
-    getUserById(this.$route.params.id)
+    getUserById(1)
         .then(data => {
           this.collectionData = data.collectionData
           this.$data.user = data;
