@@ -17,6 +17,13 @@
             </v-app-bar-title>
           </div>
         </router-link>
+        <v-spacer></v-spacer>
+
+        <router-link to="/user/1/messages">
+          <v-btn icon class= "ml-1 p-5">
+            <v-icon>mdi-message</v-icon>
+          </v-btn>
+        </router-link>
       </v-app-bar>
     </nav>
     <v-navigation-drawer
@@ -54,9 +61,10 @@ export default {
       items: [
         { title: 'Home', icon: 'mdi-home', route: '/'},
         { title: 'Projects', icon: 'mdi-chart-line-variant', route: '/projects'},
-        { title: 'Payments', icon: 'mdi-cash-refund', route: '/payments'},
+        { title: 'My Investments', icon: 'mdi-chart-line', route: '/investments'},
         { title: 'Statistics', icon: 'mdi-chart-line', route: '/statistics'},
-        { title: 'Profile', icon: 'mdi-account', route: '/users/1'}, //hardcode user/id
+        { title: 'Payments History', icon: 'mdi-cash-refund', route: '/payments'},
+        { title: 'My Profile', icon: 'mdi-account', route: '/profile'}
       ]
     }
   },

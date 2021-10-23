@@ -100,11 +100,81 @@
       "id": 1,
       "name": "José",
       "avatar": "https://concepto.de/wp-content/uploads/2018/08/persona-e1533759204552.jpg",
+      "secondName": "",
       "lastname": "Vivaldi",
       "secondLastname": "Rodriguez",
       "ruc": "123435671891",
       "email": "jvrodriguez@gmail.com",
-      "password": "password"
+      "password": "****",
+      "confirmPassword": "****",
+      "collectionData": [
+        ["Month", "Verde 456", "Las Malvinas 666", "Los Olivos 1212"],
+        ["2015", 8600, 11200, 19600],
+        ["2016", 7800, 14500, 6700],
+        ["2017", 10900, 44500, 10300],
+        ["2018", 12700, 23800, 14500],
+        ["2019", 36500, 4700, 55500],
+        ["2020", 22500, 68400, 33400],
+        ["2021", 40450, 90500, 42800]
+
+      ]
+    }
+  ],
+  "projectToInvest" : [
+    {
+      "investorId": 1,
+      "projectId": 1,
+      "amount": 500,
+      "investmentAt": "01/08/2021"
+    },
+    {
+      "investorId": 1,
+      "projectId": 2,
+      "amount": 600,
+      "investmentAt": "21/08/2021"
+    },
+    {
+      "investorId": 1,
+      "projectId": 3,
+      "amount": 1500,
+      "investmentAt": "30/09/2021"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Investment Status",
+      "content": "The property you have invested in has increased in value by 5% ",
+      "sentAt": "2021-09-11 09:53:05"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "Update Profile Information",
+      "content": "Please update your profile information",
+      "sentAt": "2021-20-11 10:53:05"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "Investment Status",
+      "content": "La propiedad en la usted a invertido ha incrementado su valor un 5%",
+      "sentAt": "2021-09-11 09:53:05"
+    }
+  ],
+  "investments": [
+    {
+      "id": 1,
+      "userId": 1,
+      "projectId": 1,
+      "sentAt": "21-09-21 15:26:53"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "projectId": 2,
+      "sentAt": "20-10-21 18:30:50"
     }
   ]
 }

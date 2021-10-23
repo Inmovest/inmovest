@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import {getUserById, updateUserInfo} from "@/services/profileService";
+import {getUserById, updateUserInfo} from "@/services/profilesService";
 import Layout from "../../components/common/Layout";
 
 export default {
@@ -88,7 +88,7 @@ export default {
     }
   },
   beforeMount() {
-    getUserById(this.$route.params.id)
+    getUserById(1)
         .then(data => {
           this.$data.user = data;
           this.$data.loading = false;
@@ -101,7 +101,7 @@ export default {
       this.user.lastname = document.getElementById("iLastname").innerText;
       this.user.ruc = document.getElementById("iRuc").innerText;
       this.user.email = document.getElementById("iEmail").innerText;
-      if(document.getElementById("iPassword") == document.getElementById("ICP")) {
+      if(document.getElementById("iPassword") === document.getElementById("ICP")) {
         this.user.password = document.getElementById("iPassword").innerText;
       }
       updateUserInfo(1, {name:"ronaldiño"});
