@@ -41,6 +41,14 @@
       "districtId": 1
     }
   ],
+  "wallets": [
+    { "id": 1, "userId": 1, "funds":  1000 },
+    { "id": 1, "userId": 2, "funds":  0}
+  ],
+  "payments": [
+    { "id":  1, "walletId":  1, "projectId": 1, "amount": 1231.654, "comment":  "Campaña 1 concluida, retorno"},
+    { "id":  1, "walletId":  1, "projectId": 2, "amount": 165.25, "comment": "" }
+  ],
   "developers": [
     {
       "id": 1,
