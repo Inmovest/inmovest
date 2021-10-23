@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import commonRoutes from "@/routes/common";
-import projectsRoutes from "@/routes/projects";
+import projectsRoutes from "@/routes/users/projects";
 import usersRoutes from "@/routes/users";
 import developerRoutes from '@/routes/developers/investments.js'
 

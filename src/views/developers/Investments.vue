@@ -13,7 +13,7 @@
 <script>
 import Layout from '../../components/common/Layout.vue'
 import { getProjectById } from "@/services/projectsService";
-import { getInvestmentsOfProject } from "@/services/developers/investmentsService";
+import { getInvestmentsOfProject } from "@/services/investmentsService";
 export default {
   components: { Layout },
   data () {
