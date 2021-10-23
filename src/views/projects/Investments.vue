@@ -18,7 +18,7 @@
 </template>
 <script>
 import Layout from "@/components/common/Layout";
-import {getInvestmentsById} from "@/services/investmentsService";
+import { getInvestments } from "@/services/investmentsService";
 import Investment from "@/components/Investment";
 
 export default {
@@ -36,7 +36,7 @@ export default {
     Layout,
   },
   beforeMount() {
-    getInvestmentsById(1)
+    getInvestments(1)
         .then(data => {
           this.$data.investments = data;
           this.$data.loading = false;
