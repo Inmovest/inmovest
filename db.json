@@ -51,6 +51,18 @@
     { "id":  3, "walletId":  1, "projectId": 2, "amount": 16235.25, "comment": "" },
     { "id":  4, "walletId":  1, "projectId": 2, "amount": 13265.25, "comment": "" }
   ],
+  "investments": [
+    { "id": 1, "amount": 500.52, "projectId": 1, "userId": 1 },
+    { "id": 2, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 3, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 4, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 5, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 6, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 7, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 8, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 9, "amount": 800.64, "projectId": 1, "userId": 1 },
+    { "id": 10, "amount": 800.64, "projectId": 1, "userId": 1 }
+  ],
   "developers": [
     {
       "id": 1,
