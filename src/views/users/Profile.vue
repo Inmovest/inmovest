@@ -88,7 +88,7 @@ export default {
     }
   },
   beforeMount() {
-    getUserById(this.$route.params.id)
+    getUserById(1)
         .then(data => {
           this.$data.user = data;
           this.$data.loading = false;

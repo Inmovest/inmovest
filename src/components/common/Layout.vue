@@ -2,7 +2,7 @@
   <section class="w-full h-full">
     <nav class="h-nav-ns">
       <v-app-bar
-          color="teal lighten-3"
+          :color="domain ? 'blue' : 'teal' + ' lighten-3'"
       >
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         <router-link to="/">
@@ -12,8 +12,17 @@
                 width="20"
                 class="mr-1 bg-black hover:bg-green-800 transition"
             />
-            <v-app-bar-title>Inmovest</v-app-bar-title>
+            <div class="text-h6">
+              Inmovest {{ domain }}
+            </div>
           </div>
+        </router-link>
+        <v-spacer></v-spacer>
+
+        <router-link to="/messages">
+          <v-btn icon class= "ml-1 p-5">
+            <v-icon>mdi-message</v-icon>
+          </v-btn>
         </router-link>
       </v-app-bar>
     </nav>
@@ -25,7 +34,7 @@
     >
       <v-list-item-content>
         <v-list-item-title class="text-h6">
-          Inmovest
+          Inmovest {{ domain }}
         </v-list-item-title>
         <v-divider></v-divider>
         <div v-for="item in items" :key="item.title">
@@ -52,12 +61,15 @@ export default {
       items: [
         { title: 'Home', icon: 'mdi-home', route: '/'},
         { title: 'Projects', icon: 'mdi-chart-line-variant', route: '/projects'},
+        { title: 'My Investments', icon: 'mdi-hand-coin', route: '/investments'},
         { title: 'Statistics', icon: 'mdi-chart-line', route: '/statistics'},
-        { title: 'Profile', icon: 'mdi-account', route: '/users/1'}, //hardcode user/id
+        { title: 'Payments History', icon: 'mdi-cash-refund', route: '/payments'},
+        { title: 'My Profile', icon: 'mdi-account', route: '/profile'}
       ]
     }
   },
-  name: 'Layout'
+  name: 'Layout',
+  props: ['domain']
 }
 </script>
 

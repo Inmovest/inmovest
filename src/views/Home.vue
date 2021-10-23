@@ -1,6 +1,19 @@
 <template>
   <Layout>
-    <h1>test</h1>
+    <section class="h-full">
+      <div class="pl-6">
+        <div class="text-h3 p-2">Welcome back!</div>
+        <div class="text-h7 p-2">This is the start of building something great!</div>
+      </div>
+      <div class="w-full flex flex-col justify-start items-center lg:flex-row ">
+        <img src="@/assets/images/home.jpg" alt="home" class="p-7 rounded-lg opacity-70">
+        <router-link to="/projects">
+          <v-btn color="secondary" class="p-5">
+            Start investing!
+          </v-btn>
+        </router-link>
+      </div>
+    </section>
   </Layout>
 </template>
 
