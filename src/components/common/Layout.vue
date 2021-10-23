@@ -54,6 +54,7 @@ export default {
       items: [
         { title: 'Home', icon: 'mdi-home', route: '/'},
         { title: 'Projects', icon: 'mdi-chart-line-variant', route: '/projects'},
+        { title: 'Statistics', icon: 'mdi-chart-line', route: '/users/1/investment'},
         { title: 'Payments', icon: 'mdi-cash-refund', route: '/payments'},
         { title: 'Statistics', icon: 'mdi-chart-line', route: '/statistics'},
         { title: 'Profile', icon: 'mdi-account', route: '/users/1'}, //hardcode user/id

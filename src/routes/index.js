@@ -4,6 +4,7 @@ import commonRoutes from "@/routes/common";
 import projectsRoutes from "@/routes/projects";
 import usersRoutes from "@/routes/users";
 import developerRoutes from '@/routes/developers/investments.js'
+import investmentsRoutes from "@/routes/investments";
 
 Vue.use(VueRouter)
 
@@ -12,6 +13,7 @@ const routes = [
   ...commonRoutes,
   ...usersRoutes,
   ...developerRoutes
+  ...investmentsRoutes
 ]
 
 const router = new VueRouter({
