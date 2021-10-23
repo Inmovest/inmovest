@@ -41,6 +41,16 @@
       "districtId": 1
     }
   ],
+  "wallets": [
+    { "id": 1, "userId": 1, "funds":  1000 },
+    { "id": 2, "userId": 2, "funds":  0}
+  ],
+  "payments": [
+    { "id":  1, "walletId":  1, "projectId": 1, "amount": 1231.654, "comment":  "Campaña 1 concluida, retorno"},
+    { "id":  2, "walletId":  1, "projectId": 2, "amount": 165.25, "comment": "" },
+    { "id":  3, "walletId":  1, "projectId": 2, "amount": 16235.25, "comment": "" },
+    { "id":  4, "walletId":  1, "projectId": 2, "amount": 13265.25, "comment": "" }
+  ],
   "investments": [
     { "id": 1, "amount": 500.52, "projectId": 1, "userId": 1 },
     { "id": 2, "amount": 800.64, "projectId": 1, "userId": 1 },
