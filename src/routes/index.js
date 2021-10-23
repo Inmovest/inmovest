@@ -5,6 +5,7 @@ import projectsRoutes from "@/routes/projects";
 import usersRoutes from "@/routes/users";
 import developerRoutes from '@/routes/developers/investments.js'
 import investmentsRoutes from "@/routes/investments";
+import messagesRoutes from "@/routes/messages";
 
 Vue.use(VueRouter)
 
@@ -12,8 +13,9 @@ const routes = [
   ...projectsRoutes,
   ...commonRoutes,
   ...usersRoutes,
-  ...developerRoutes
-  ...investmentsRoutes
+  ...developerRoutes,
+  ...investmentsRoutes,
+  ...messagesRoutes
 ]
 
 const router = new VueRouter({
