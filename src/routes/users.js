@@ -2,7 +2,7 @@ import  UsersDetails from "@/views/users/Profile";
 import Payments from "@/views/users/Payments";
 import Investments from "@/views/projects/Investments";
 import Statistics from "@/views/users/Statistics";
-import Messages from "@/views/messages/Messages";
+import Messages from "@/views/users/Messages";
 import Projects from "@/views/projects/Projects";
 import ProjectDetails from "@/views/projects/ProjectDetails";
 
