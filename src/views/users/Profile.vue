@@ -101,7 +101,7 @@ export default {
       this.user.lastname = document.getElementById("iLastname").innerText;
       this.user.ruc = document.getElementById("iRuc").innerText;
       this.user.email = document.getElementById("iEmail").innerText;
-      if(document.getElementById("iPassword") == document.getElementById("ICP")) {
+      if(document.getElementById("iPassword") === document.getElementById("ICP")) {
         this.user.password = document.getElementById("iPassword").innerText;
       }
       updateUserInfo(1, {name:"ronaldiño"});
