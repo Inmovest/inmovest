@@ -1,6 +1,6 @@
 import fetchAPI from "@/services/common";
 
-//const getInvestmentsById = async (id) => fetchAPI(`/investments?userId=${id}`)
-const getInvestmentsById = async (id) => fetchAPI(`/investments/?_expand=project&userId=${id}`)
+const getInvestments = async (id) => fetchAPI(`/investments/?_expand=project&userId=${id}`)
+const  getInvestmentsOfProject = async (id) => fetchAPI(`/project/${id}/investments`)
 
-export { getInvestmentsById }
+export { getInvestments, getInvestmentsOfProject }
