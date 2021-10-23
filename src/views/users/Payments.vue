@@ -18,7 +18,7 @@
 
 <script>
 import Layout from "@/components/common/Layout";
-import { getPayments } from "@/services/user/paymentsService";
+import { getPayments } from "@/services/paymentsService";
 export default {
   name: "Payments.vue",
   components: {
