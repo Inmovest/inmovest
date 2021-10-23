@@ -19,7 +19,7 @@
         </router-link>
         <v-spacer></v-spacer>
 
-        <router-link to="/user/1/messages">
+        <router-link to="/messages">
           <v-btn icon class= "ml-1 p-5">
             <v-icon>mdi-message</v-icon>
           </v-btn>
