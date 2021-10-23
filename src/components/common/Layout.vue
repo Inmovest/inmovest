@@ -65,6 +65,7 @@ export default {
         { title: 'Payments', icon: 'mdi-cash-refund', route: '/payments'},
         { title: 'Statistics', icon: 'mdi-chart-line', route: '/statistics'},
         { title: 'Profile', icon: 'mdi-account', route: '/users/1'}, //hardcode user/id
+        { title: 'Investments', icon: 'mdi-chart-areaspline', route: '/users/1/investments'}, //hardcode user/id
       ]
     }
   },
