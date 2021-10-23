@@ -2,11 +2,11 @@
   <Layout>
     <div class="container">
       <h1 class="font-bold text-4xl text-center my-5">Your Investment Statistics</h1>
-        <div class="w-full" v-if="user">
-          <div>
-            <h2 class="text-start ml-1 p-5"> Graph based on years and thousands of dollars </h2>
-          </div>
+      <div class="w-full" v-if="user">
+        <div>
+          <h2 class="text-start ml-1 p-5"> Graph based on years and thousands of dollars </h2>
         </div>
+      </div>
       <GChart
           type="LineChart"
           :options="options"

@@ -25,7 +25,6 @@ export default {
   name: "InvestmentList",
   data() {
     return {
-      projects: [],
       investments: [],
       loading: true,
       error: null,

@@ -18,8 +18,7 @@
           </div>
         </router-link>
         <v-spacer></v-spacer>
-
-        <router-link to="/messages">
+        <router-link v-if="!domain" to="/messages">
           <v-btn icon class= "ml-1 p-5">
             <v-icon>mdi-message</v-icon>
           </v-btn>
@@ -47,7 +46,7 @@
         </div>
       </v-list-item-content>
     </v-navigation-drawer>
-    <section id="content">
+    <section class="content">
       <slot></slot>
     </section>
   </section>
@@ -72,16 +71,3 @@ export default {
   props: ['domain']
 }
 </script>
-
-<style>
-#content {
-  /* Firefox */
-  height: -moz-calc(100% - 64px);
-  /* WebKit */
-  height: -webkit-calc(100% - 64px);
-  /* Opera */
-  height: -o-calc(100% - 64px);
-  /* Standard */
-  height: calc(100% - 64px);
-}
-</style>
