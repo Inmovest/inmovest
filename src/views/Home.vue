@@ -1,16 +1,18 @@
 <template>
   <Layout>
     <section class="h-full">
-      <h1 class="text-6xl p-5">Invest on Real State!</h1>
-      <div class="w-full flex justify-start items-center">
-        <img src="@/assets/images/home.jpg" alt="home" class="mr-5 rounded-lg opacity-70">
+      <div class="pl-6">
+        <div class="text-h3 p-2">Welcome back!</div>
+        <div class="text-h7 p-2">This is the start of building something great!</div>
+      </div>
+      <div class="w-full flex flex-col justify-start items-center lg:flex-row ">
+        <img src="@/assets/images/home.jpg" alt="home" class="p-7 rounded-lg opacity-70">
         <router-link to="/projects">
-          <v-btn color="secondary">
+          <v-btn color="secondary" class="p-5">
             Start investing!
           </v-btn>
         </router-link>
       </div>
-
     </section>
   </Layout>
 </template>

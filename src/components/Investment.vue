@@ -11,6 +11,9 @@
             {{ investment.project.description }}
           </v-card-subtitle>
         </div>
+        <div class="col flex items-center">
+          S/. {{investment.amount}}
+        </div>
         <div class="col-2 container" style="margin: auto">
           <p class="text-sm">{{investment.sentAt.substring(0,8)}}</p>
           <p class="text-sm">Time: {{investment.sentAt.substring(8)}}</p>
@@ -29,6 +32,7 @@ export default {
       userId: Number,
       projectId: Number,
       sentAt: String,
+      amount: Number,
       project: {
         id: Number,
         name: String,

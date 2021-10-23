@@ -12,9 +12,9 @@
                 width="20"
                 class="mr-1 bg-black hover:bg-green-800 transition"
             />
-            <v-app-bar-title>
+            <div class="text-h6">
               Inmovest {{ domain }}
-            </v-app-bar-title>
+            </div>
           </div>
         </router-link>
         <v-spacer></v-spacer>
@@ -61,7 +61,7 @@ export default {
       items: [
         { title: 'Home', icon: 'mdi-home', route: '/'},
         { title: 'Projects', icon: 'mdi-chart-line-variant', route: '/projects'},
-        { title: 'My Investments', icon: 'mdi-chart-line', route: '/investments'},
+        { title: 'My Investments', icon: 'mdi-hand-coin', route: '/investments'},
         { title: 'Statistics', icon: 'mdi-chart-line', route: '/statistics'},
         { title: 'Payments History', icon: 'mdi-cash-refund', route: '/payments'},
         { title: 'My Profile', icon: 'mdi-account', route: '/profile'}
