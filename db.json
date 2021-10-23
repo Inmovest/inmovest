@@ -86,5 +86,19 @@
       "password": "****",
       "confirmPassword": "****"
     }
+  ],
+  "investments": [
+    {
+      "id": 1,
+      "userId": 1,
+      "projectId": 1,
+      "sentAt": "21-09-21 15:26:53"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "projectId": 2,
+      "sentAt": "20-10-21 18:30:50"
+    }
   ]
 }
