@@ -39,7 +39,6 @@ export default {
     getInvestmentsById(1)
         .then(data => {
           this.$data.investments = data;
-          console.log("data", this.$data.investments);
           this.$data.loading = false;
         })
         .catch(e => this.$data.error = e)

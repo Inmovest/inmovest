@@ -52,7 +52,7 @@
     { "id":  4, "walletId":  1, "projectId": 2, "amount": 13265.25, "comment": "" }
   ],
   "investments": [
-    { "id": 1, "amount": 500.52, "projectId": 4, "userId": 1, "sentAt": "21-09-21 15:26:53"},
+    { "id": 1, "amount": 2000.52, "projectId": 4, "userId": 1, "sentAt": "21-09-21 15:26:53"},
     { "id": 2, "amount": 800.64, "projectId": 4, "userId": 1, "sentAt": "21-09-21 15:26:53"},
     { "id": 3, "amount": 955585.64, "projectId": 2, "userId": 1, "sentAt": "21-09-21 15:26:53"},
     { "id": 4, "amount": 650.64, "projectId": 1, "userId": 1, "sentAt": "21-09-21 15:26:53"},
@@ -116,7 +116,6 @@
         ["2019", 36500, 4700, 55500],
         ["2020", 22500, 68400, 33400],
         ["2021", 40450, 90500, 42800]
-
       ]
     }
   ],
