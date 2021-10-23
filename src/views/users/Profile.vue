@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import {getUserById, updateUserInfo} from "@/services/profilesService";
+import {getUserById, updateUserInfo} from "@/services/profileService";
 import Layout from "../../components/common/Layout";
 
 export default {

@@ -2,7 +2,7 @@
   <section class="w-full h-full">
     <nav class="h-nav-ns">
       <v-app-bar
-          color="teal lighten-3"
+          :color="domain ? 'blue' : 'teal' + ' lighten-3'"
       >
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         <router-link to="/">
@@ -12,7 +12,9 @@
                 width="20"
                 class="mr-1 bg-black hover:bg-green-800 transition"
             />
-            <v-app-bar-title>Inmovest</v-app-bar-title>
+            <v-app-bar-title>
+              Inmovest {{ domain }}
+            </v-app-bar-title>
           </div>
         </router-link>
       </v-app-bar>
@@ -25,7 +27,7 @@
     >
       <v-list-item-content>
         <v-list-item-title class="text-h6">
-          Inmovest
+          Inmovest {{ domain }}
         </v-list-item-title>
         <v-divider></v-divider>
         <div v-for="item in items" :key="item.title">
@@ -52,12 +54,14 @@ export default {
       items: [
         { title: 'Home', icon: 'mdi-home', route: '/'},
         { title: 'Projects', icon: 'mdi-chart-line-variant', route: '/projects'},
+        { title: 'Payments', icon: 'mdi-cash-refund', route: '/payments'},
         { title: 'Statistics', icon: 'mdi-chart-line', route: '/statistics'},
         { title: 'Profile', icon: 'mdi-account', route: '/users/1'}, //hardcode user/id
       ]
     }
   },
-  name: 'Layout'
+  name: 'Layout',
+  props: ['domain']
 }
 </script>
 
