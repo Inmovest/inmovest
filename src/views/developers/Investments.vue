@@ -36,6 +36,5 @@ export default {
         .then(data => this.$data.investments = data)
         .catch(e => this.$data.error = e)
   }
-
 }
 </script>

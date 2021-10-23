@@ -27,7 +27,7 @@ export default {
   },
   data (){
     return {
-      loading: true,
+      loading: false,
       project: null,
       error: null
     }
@@ -35,6 +35,7 @@ export default {
   beforeMount() {
     getProjectById(this.$route.params.id)
         .then(data => {
+          console.log(data)
           this.$data.project = data;
           this.$data.loading = false;
         })
