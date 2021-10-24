@@ -162,5 +162,20 @@
       "content": "La propiedad en la usted a invertido ha incrementado su valor un 5%",
       "sentAt": "2021-09-11 09:53:05"
     }
-  ]
+  ],
+
+  "creditcards": [
+    {
+
+              "idCardNumber":1,
+              "cardNumber":"",
+              "fullNameCard":"",
+              "dueDate":"",
+              "securityCode":"",
+              "userId":1
+    }
+
+
+          ]
+
 }
