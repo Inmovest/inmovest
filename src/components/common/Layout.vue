@@ -60,7 +60,7 @@ export default {
       drawer: false,
       items: [
         { title: 'Home', icon: 'mdi-home', route: '/'},
-        { title: 'Projects', icon: 'mdi-chart-line-variant', route: '/projects'},
+        { title: 'Projects', icon: 'mdi-office-building', route: '/projects'},
         { title: 'My Investments', icon: 'mdi-hand-coin', route: '/investments'},
         { title: 'Statistics', icon: 'mdi-chart-line', route: '/statistics'},
         { title: 'Payments History', icon: 'mdi-cash-refund', route: '/payments'},
