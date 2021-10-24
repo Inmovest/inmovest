@@ -35,7 +35,7 @@
               </v-card-title>
 
               <v-card-text class="mt-5">
-                ¿Estás seguro que quieres eliminar la inversión a este proyecto?
+                Si desea eliminar la inversión a este proyecto debe envíar una solicitud. ¿Estás seguro que quiere enviarla?
               </v-card-text>
 
               <v-divider></v-divider>
@@ -43,7 +43,7 @@
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn color="primary" text @click="dialog = false">
-                  Eliminar
+                  Enviar solicitud
                 </v-btn>
                 <v-btn color="primary" depressed @click="dialog = false">
                   Cancelar
@@ -78,6 +78,11 @@ export default {
       }
     },
   },
+  data(){
+    return{
+      dialog: false
+    }
+  }
 }
 </script>
 
